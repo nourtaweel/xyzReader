@@ -42,7 +42,7 @@ public class UpdaterService extends IntentService {
             Log.w(TAG, "Not online, not refreshing.");
             return;
         }
-
+        Log.i(TAG, "start refresh");
         sendStickyBroadcast(
                 new Intent(BROADCAST_ACTION_STATE_CHANGE).putExtra(EXTRA_REFRESHING, true));
 
@@ -80,6 +80,7 @@ public class UpdaterService extends IntentService {
             Log.e(TAG, "Error updating content.", e);
         }
 
+        Log.i(TAG, "stop refresh");
         sendStickyBroadcast(
                 new Intent(BROADCAST_ACTION_STATE_CHANGE).putExtra(EXTRA_REFRESHING, false));
     }
