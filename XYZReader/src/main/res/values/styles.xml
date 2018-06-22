@@ -23,6 +23,7 @@
 
     <style name="Theme.Bacon.Detail">
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:selectableItemBackground">@color/theme_primary_light</item>
     </style>
 
 </resources>
